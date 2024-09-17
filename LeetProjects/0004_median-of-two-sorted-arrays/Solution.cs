@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LeetProjects.Helper;
 
 namespace LeetProjects._0004_median_of_two_sorted_arrays
 {
@@ -10,7 +6,7 @@ namespace LeetProjects._0004_median_of_two_sorted_arrays
     /// Class containing the 4th solution of LeetCode problems
     /// <para>level: Hard</para>
     /// </summary>
-    public class Solution4
+    public class Solution4 : Tools
     {
         /// <summary>
         /// Given two sorted arrays nums1 and nums2 of size m and n respectively.
@@ -34,20 +30,11 @@ namespace LeetProjects._0004_median_of_two_sorted_arrays
         public void print(int[] a, int[] b)
         {
             Console.Write("Median array of ");
-            print_array(a);
+            print_array<int>(a);
             Console.Write(" and ");
-            print_array(b);
+            print_array<int>(b);
             Console.WriteLine(" is " + FindMedianSortedArrays(a, b));
 
-        }
-        private void print_array(int[] array)
-        {
-            Console.Write("[ ");
-            foreach (var item in array)
-            {
-                Console.Write(item + " ");
-            }
-            Console.Write("]");
         }
     }
 }
