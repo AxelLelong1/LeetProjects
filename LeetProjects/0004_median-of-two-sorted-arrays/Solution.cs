@@ -10,7 +10,7 @@ namespace LeetProjects._0004_median_of_two_sorted_arrays
     /// Class containing the 4th solution of LeetCode problems
     /// <para>level: Hard</para>
     /// </summary>
-    public class Solution
+    public class Solution4
     {
         /// <summary>
         /// Given two sorted arrays nums1 and nums2 of size m and n respectively.
@@ -33,7 +33,21 @@ namespace LeetProjects._0004_median_of_two_sorted_arrays
 
         public void print(int[] a, int[] b)
         {
-            Console.WriteLine("Median array of " + a.ToString() + " and " + b.ToString() + " is " + FindMedianSortedArrays(a, b));
+            Console.Write("Median array of ");
+            print_array(a);
+            Console.Write(" and ");
+            print_array(b);
+            Console.WriteLine(" is " + FindMedianSortedArrays(a, b));
+
+        }
+        private void print_array(int[] array)
+        {
+            Console.Write("[ ");
+            foreach (var item in array)
+            {
+                Console.Write(item + " ");
+            }
+            Console.Write("]");
         }
     }
 }
